@@ -1,7 +1,5 @@
 package com.devsuperior.dslist.dto;
 
-import java.util.Objects;
-
 import com.devsuperior.dslist.entities.GameList;
 
 public class GameListDTO {
@@ -22,16 +20,8 @@ public class GameListDTO {
 		return id;
 	}
 
-	
 	public String getName() {
 		return name;
 	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	
 
 }
