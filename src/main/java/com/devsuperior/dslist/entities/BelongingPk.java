@@ -2,21 +2,22 @@ package com.devsuperior.dslist.entities;
 
 import java.util.Objects;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+
 @Embeddable
 public class BelongingPk {
 	@ManyToOne
 	@JoinColumn(name = "game_id")
 	private Game game;
+
 	@ManyToOne
 	@JoinColumn(name = "list_id")
 	private GameList list;
-	
+
 	public BelongingPk() {
-		
+
 	}
 
 	public BelongingPk(Game game, GameList list) {
@@ -57,9 +58,5 @@ public class BelongingPk {
 		BelongingPk other = (BelongingPk) obj;
 		return Objects.equals(game, other.game) && Objects.equals(list, other.list);
 	}
-	
-	
-	
-	
-	
+
 }
